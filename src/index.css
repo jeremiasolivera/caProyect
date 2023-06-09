@@ -1,69 +1,84 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;300;400;500;600;700&display=swap');
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+
+/* Josefinesans Font 
+font-family: 'Josefin Sans', sans-serif; */
+
+:root{
+  --body-color: #323131;
+  --color-primary: #fffffff2;
+  --color-secondary: #fbb500;
+  --line-color-secondary: #fbb400b0;
+  --card-color: #121111;
+  --dark-color: #1f1d1d;
+  --shadow-color: #000000ad;
+  --shadow-color-secondary: #ffffff25;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+*{
+  padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+body{
+  font-size: 16px;
+  background-color: var(--body-color);
+  color: var(--color-primary);
+
+}
+
+
+/* Nabvar Menu */
+.cont-navbar-menu{
+  padding: 30px;
+  width: 100%;
+  height: 4rem;
+  position: fixed;
+  z-index: 999;
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 300ms;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.down{
+  background-color: var(--card-color);
+  box-shadow: 0 0 8px var(--shadow-color-secondary);
+
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+hr{
+  border-color: var(--line-color-secondary);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+
+/* NUESTRO EQUIPO*/
+
+.cont-nuestroEquipo{
+  width: 80%;
+  margin:  0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8rem;
+}
+
+.nuestro-equipo{
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px 0;
+  color: var(--color-secondary);
+  letter-spacing: .5px;
+}
+
+.paragraph-nuestroEquipo{
+  text-align: center;
+  font-size: 11px;
+  margin-bottom: 30px;                               
 }
